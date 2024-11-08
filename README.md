@@ -18,7 +18,7 @@
 
 ### English
 
-practice project of Android at 2020，There is a high probability that development will not continue.
+Practice project of Android at 2020，there is a high probability will not continue.
 
 finish part : home page, order, fast order, shopping cart, account
 
@@ -26,10 +26,17 @@ un finish part : comment area, search engine, customer service, CV, share
 
 ### 项目一览(display of project)
 
+测试机(display device) : 华为 Mate 20 pro(HUAWEI Mate 20 Pro), huawei lya-l29。
+
+主页(home page)
 ![主页](./read_me_img/1_home_page.gif)
+_主页(home page)_
 
 ![购物与下单](./read_me_img/2_shop_order.gif)
+_购物与下单(shop and order)_
 
 ![折扣页与快速下单](./read_me_img/3_discount_fast_shop.gif)
+_折扣与快速下单(discount and fast shop)_
 
 ![账户](./read_me_img/4_account.gif)
+_账户(account)_
