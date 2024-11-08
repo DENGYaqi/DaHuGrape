@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.dahugrape.b_bottom_navigation.B1_HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/b1_fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_offer"
+            app:destination="@id/navigation_offer" />
+        <action
+            android:id="@+id/action_navigation_home_to_c1_DetailsGrapeFragment"
+            app:destination="@id/c1_DetailsGrapeFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_cart"
+            app:destination="@id/navigation_cart" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.example.dahugrape.d_pay.D1_CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/d1_fragment_cart" >
+        <action
+            android:id="@+id/action_navigation_cart_to_e3_OrderFragment"
+            app:destination="@id/e3_OrderFragment"
+            app:popUpTo="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_offer"
+        android:name="com.example.dahugrape.b_bottom_navigation.B2_OfferFragment"
+        android:label="Offer"
+        tools:layout="@layout/b2_fragment_offer" >
+        <action
+            android:id="@+id/action_navigation_offer_to_navigation_cart"
+            app:destination="@id/navigation_cart"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_left_out"
+            app:popEnterAnim="@anim/push_right_out"
+            app:popExitAnim="@anim/push_left_in" />
+        <action
+            android:id="@+id/action_navigation_offer_to_c1_DetailsGrapeFragment"
+            app:destination="@id/c1_DetailsGrapeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/e3_OrderFragment"
+        android:name="com.example.dahugrape.e_account.E3_order.E3_OrderFragment"
+        android:label="e3_fragment_order"
+        tools:layout="@layout/e3_fragment_order" >
+        <action
+            android:id="@+id/action_e3_OrderFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/c1_DetailsGrapeFragment"
+        android:name="com.example.dahugrape.c_product_detail.C1_DetailsGrapeFragment"
+        tools:layout="@layout/c1_fragment_details_grape"
+        android:label="C1_DetailsGrapeFragment" >
+        <action
+            android:id="@+id/action_c1_DetailsGrapeFragment_to_navigation_cart"
+            app:destination="@id/navigation_cart" />
+        <action
+            android:id="@+id/action_c1_DetailsGrapeFragment_to_c2_ReviewProductFragment"
+            app:destination="@id/c2_ReviewProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.example.dahugrape.e_account.E1_AccountFragment"
+        android:label="Account"
+        tools:layout="@layout/e1_fragment_account" >
+        <action
+            android:id="@+id/action_navigation_account_to_e3_OrderFragment"
+            app:destination="@id/e3_OrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/c2_ReviewProductFragment"
+        android:name="com.example.dahugrape.c_product_detail.C2_ReviewProductFragment"
+        android:label="c2_fragment_review_product"
+        tools:layout="@layout/c2_fragment_review_product" >
+        <action
+            android:id="@+id/action_c2_ReviewProductFragment_to_c1_DetailsGrapeFragment"
+            app:destination="@id/c1_DetailsGrapeFragment" />
+        <action
+            android:id="@+id/action_c2_ReviewProductFragment_to_c3_WriteReviewFragment"
+            app:destination="@id/c3_WriteReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/c3_WriteReviewFragment"
+        android:name="com.example.dahugrape.c_product_detail.C3_WriteReviewFragment"
+        android:label="c3_fragment_write_review"
+        tools:layout="@layout/c3_fragment_write_review" >
+        <action
+            android:id="@+id/action_c3_WriteReviewFragment_to_c2_ReviewProductFragment"
+            app:destination="@id/c2_ReviewProductFragment" />
+    </fragment>
+</navigation>

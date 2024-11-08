@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="grape"
+            type="com.example.dahugrape.database.model.Grape" />
+
+        <variable
+            name="ratingViewModel"
+            type="com.example.dahugrape.database.viewmodels.RatingViewModel" />
+
+        <variable
+            name="ratingInterface"
+            type="com.example.dahugrape.database.adapter.RatingAdapter.RatingInterface" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:theme="@style/MaterialComponent"
+        tools:context=".c_product_detail.C2_ReviewProductFragment">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- checkedChip默认checked按钮 -->
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/c2_cg_select_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/c2_chip_all_review"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/c2_label_all_review" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/c2_chip_1_star"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/c2_label_1star" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/c2_chip_2_star"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/c2_label_2star" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/c2_chip_3_star"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/c2_label_3star" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/c2_chip_4_star"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/c2_label_4star" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/c2_chip_5_star"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/c2_label_5star" />
+
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/c2_rv_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/c2_item_rating" />
+
+                <TextView
+                    android:id="@+id/c2_tv_empty_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/c2_no_views"
+                    android:visibility="gone" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/c2_btn_write_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:padding="12dp"
+                    android:text="@string/c2_bnt_write_review"
+                    android:textAllCaps="false"
+                    app:cornerRadius="100dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

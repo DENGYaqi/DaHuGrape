@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="grape"
+            type="com.example.dahugrape.database.model.Grape" />
+
+        <variable
+            name="rating"
+            type="com.example.dahugrape.database.model.Rating" />
+
+        <variable
+            name="grapeInterface"
+            type="com.example.dahugrape.database.adapter.GrapeAdapter.GrapeInterface" />
+
+        <variable
+            name="grapViewModel"
+            type="com.example.dahugrape.database.viewmodels.GrapeViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:theme="@style/MaterialComponent"
+        tools:context=".c_product_detail.C3_WriteReviewFragment">
+
+        <TextView
+            android:id="@+id/c3_tv_hint_select_star"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:text="Please write overall level of satisfaction with this product"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/c3_rb_write_review"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:padding="16dp"
+                android:progressBackgroundTint="#FFC833"
+                android:progressTint="#FFC833" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/c3_rb_write_review"
+                android:text="0/5"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Write Your Review"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_review_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/editbox_background"
+            android:gravity="top"
+            android:hint="Enter Review"
+            android:inputType="textMultiLine"
+            android:minLines="6"
+            android:padding="16dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/c3_btn_commit_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:padding="12dp"
+            android:onClick="@{() -> grapViewModel.addItemRatingToGrape(grape, rating)}"
+            android:text="Commit my review"
+            android:textAllCaps="false"
+            app:cornerRadius="100dp" />
+
+    </LinearLayout>
+</layout>

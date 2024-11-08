@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 要配置系统以使用建议提供程序，您需要在可搜索配置文件中将 android:searchSuggestAuthority 和 android:searchSuggestSelection 属性添加到 <searchable> 元素。 -->
+<!-- android:searchSuggestAuthority 的值应该是内容提供程序的完全限定名称，与内容提供程序中使用的授权方（上例中的 AUTHORITY 字符串）完全匹配。 -->
+<!-- android:searchSuggestSelection 的值必须是一个问号，前面加上一个空格 (" ?")，它是 SQLite 选择参数的占位符（会自动由用户输入的查询文本替换）。 -->
+<searchable xmlns:android="http://schemas.android.com/apk/res/android"
+    android:label="@string/app_name"
+    android:hint="@string/search_hint"/>
+<!-- 详细的配置文件内容在这个页面 : https://developer.android.com/guide/topics/search/searchable-config -->
+<!-- 看需要添加 -->

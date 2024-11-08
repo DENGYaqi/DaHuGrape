@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#c5e1a5</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#94af76</color>
+    <color name="colorText">#ecf0f1</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="radio_button_selected_color">#94af76</color>
+    <color name="radio_button_unselected_color">@android:color/transparent</color>
+
+    <color name="greyPrimary">#DE000000</color>
+    <color name="greySecondary">#8B000000</color>
+    <color name="greyDisabled">#61000000</color>
+
+    <!-- 收件人管理按钮颜色 -->
+    <color name="buttonLabel">#FFFFFF</color>
+    <!-- 价格颜色 -->
+    <color name="price">#40BFFF</color>
+
+    <!-- 莫兰迪蓝色系 -->
+    <color name="light_light_blue">#c1cbd7</color>
+    <color name="light_gray_blue">#afb0b2</color>
+    <color name="dark_blue">#8696a7</color>
+    <color name="light_blue">#9ca8b8</color>
+
+    <!-- 莫兰迪灰色色系 -->
+    <color name="gray_brown">#939391</color>
+    <color name="light_gray">#bfbfbf</color>
+    <color name="light_light_gray">#ececea</color>
+    <color name="milky_white">#fffaf4</color>
+    <color name="dark_gray">#656565</color>
+
+    <!-- 莫兰迪绿色系 -->
+    <color name="light_light_green">#e0e5df</color>
+    <color name="light_green">#b5c4b1</color>
+    <color name="green">#96a48b</color>
+    <color name="dark_green">#7b8b6f</color>
+
+    <!-- 莫兰迪其他色系 -->
+    <color name="pink_gray">#dfd7d7</color>
+    <color name="light_land">#d8caaf</color>
+    <color name="dark_land">#c5b8a5</color>
+    <color name="light_light_yellow">#fdf9ee</color>
+    <color name="milky_brown">#f0ebe5</color>
+
+    <!-- Material System绿色系 -->
+    <color name="basil_green">#356859</color>
+    <color name="light_basil_green">#37966F</color>
+    <color name="light_light_basil_green">#B9E4C9</color>
+
+    <!-- 宝贝选的绿色系 -->
+    <color name="primaryColor">#c5e1a5</color>
+    <color name="primaryLightColor">#f8ffd7</color>
+    <color name="primaryDarkColor">#94af76</color>
+    <color name="primaryTextColor">#FFFFFFFF</color>
+
+    <!-- 网络色系 现在用这个-->
+    <color name="green_blue">#99CC99</color>
+    <color name="red_pink">#FF6666</color>
+
+    <!-- 购物车使用 -->
+    <color name="colorPrimaryCart">#41D3BD</color>
+    <color name="colorPrimaryDarkCart">#41D3BD</color>
+    <color name="colorAccentCart">#FDA14F</color>
+    <color name="colorTextIcons">#FFFFFF</color>
+    <color name="colorTextPrimary">#212121</color>
+    <color name="colorTextSecondary">#757575</color>
+    <color name="colorRatingActive">#FDA14F</color>
+    <color name="colorBackground">#EEEEEE</color>
+
+    <!-- 未分类 -->
+    <color name="red">#ff0000</color>
+
+</resources>

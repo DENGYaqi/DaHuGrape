@@ -1,0 +1,17 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="big_padding">16dp</dimen>
+    <dimen name="min_height">10dp</dimen>
+
+
+    <!-- item_grape -->
+    <dimen name="minHeight">148dp</dimen>
+
+    <!-- chat bot -->
+    <dimen name="tfe_sr_activity_margin">16dp</dimen>
+
+</resources>

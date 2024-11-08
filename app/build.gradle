@@ -1,0 +1,181 @@
+plugins {
+    id 'com.android.application'
+    // FireBase
+    id 'com.google.gms.google-services'
+    // Kotlin
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.dahugrape"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true // 为了在ImageButton中使用图片
+
+        // TFLite
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    // 避免在打包apk的是对模型有压缩操作，损坏模型。现在好像不加也没有关系，但是为了安全起见，还是添加上去。
+    aaptOptions {
+        noCompress "tflite"
+    }
+
+    buildFeatures {
+        // 数据绑定
+        dataBinding true
+        // for view binding:
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    /**
+     * Android studio 基础依赖包
+     */
+    //Toolbar必须要有这个
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+
+    // 一些android UI需要的
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'androidx.annotation:annotation:1.2.0'
+
+    // 为了要使用Live Data 和 view model
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
+    // 为了要使用Live Data
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    // 防止android在Manifest有两个相同的文件
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    /**
+     * Firebase 相关依赖包
+     * 1 在 Android 上使用电话号码进行 Firebase 身份验证(authantidication) : 邮件验证
+     * 2 把数据存入firestore : AddGrapeDataCsvToCloudFirevase
+     */
+    // 导入Firebase平台的BoM
+    implementation platform('com.google.firebase:firebase-bom:26.6.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    // 声明Firebase认证库的依赖关系。
+    // 当使用BoM时，你不需要在Firebase库依赖中指定版本。
+    implementation 'com.google.firebase:firebase-auth'
+    // 同时声明Google Play服务库的依赖关系，并指定其版本。
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    // 使用Firebase -- Firestore 现在还没用 在Firebase Adapter内使用
+    implementation 'com.google.firebase:firebase-firestore:23.0.0'
+    implementation 'com.firebaseui:firebase-ui-firestore:7.1.0'
+    implementation 'com.google.firebase:firebase-storage:20.0.0'
+
+    /**
+     * 加载网络或者数据库内的URL图片
+     */
+    // Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.google.firebase:firebase-database:19.7.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    /**
+     * Room 数据库 相关的依赖包
+     */
+    implementation "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
+
+    // 使用架构组件的依赖性
+    // 可能需要更新build.gradle（项目）中的版本号。
+
+    // Room components
+    implementation "androidx.room:room-runtime:$rootProject.roomVersion"
+    annotationProcessor "androidx.room:room-compiler:$rootProject.roomVersion"
+    androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+
+    // Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$rootProject.lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata:$rootProject.lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$rootProject.lifecycleVersion"
+
+    // UI
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
+
+    // 关于 重新下载软件后遇到 java.lang.SecurityException的错误指向用户头像
+    implementation "androidx.localbroadcastmanager:localbroadcastmanager:1.0.0"
+
+    // 使用CardView
+    implementation "androidx.cardview:cardview:1.0.0"
+
+    // 使用Material的组件
+    implementation 'com.google.android.material:material:1.3.0'
+
+    // Explore分类按钮页面
+    implementation 'com.afollestad:sectioned-recyclerview:0.2.3'
+
+    // 付费需要引入的项目
+    implementation 'com.razorpay:checkout:1.6.6'
+
+    // 轮播图使用
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3'
+
+    // 个性化的bottom navigation bar
+    implementation 'com.etebarian:meow-bottom-navigation-java:1.2.0'
+
+    // 购物车相关RoundedImageView
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+
+    // TF Lite
+    implementation 'org.tensorflow:tensorflow-lite:2.4.0'
+
+    // ChatBot Kotlin
+    //RecyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
+
+    // Computer Vision
+    // Classification Image
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.3.0'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'
+
+    // 本地单元测试
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'com.google.truth:truth:1.1.2'
+    // 仪表测试
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'com.google.truth:truth:1.1.2'
+
+    // dataBinding
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+}

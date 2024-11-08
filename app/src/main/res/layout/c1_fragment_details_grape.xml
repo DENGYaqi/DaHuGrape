@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="grape"
+            type="com.example.dahugrape.database.model.Grape" />
+
+        <variable
+            name="grapeViewModel"
+            type="com.example.dahugrape.database.viewmodels.GrapeViewModel" />
+
+        <variable
+            name="ratingViewModel"
+            type="com.example.dahugrape.database.viewmodels.RatingViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:theme="@style/MaterialComponent"
+        tools:context=".c_product_detail.C1_DetailsGrapeFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="56dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/c1_vp_grape_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+
+                </androidx.viewpager.widget.ViewPager>
+
+                <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                    android:id="@+id/c1_dot_grape_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:dotsColor="@android:color/holo_green_light"
+                    app:dotsSize="15dp"
+                    app:dotsSpacing="5dp"
+                    app:selectedDotColor="@android:color/holo_green_dark"
+                    app:stiffness="300">
+
+                </com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/c1_grape_details_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@{grapeViewModel.grape.name}"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/c1_btn_favorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_favorite" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RatingBar
+                        android:id="@+id/c1_rb_grape_details"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:progressBackgroundTint="#FFC833"
+                        android:progressTint="#FFC833" />
+
+                    <TextView
+                        android:id="@+id/c1_numeric_rating_grape_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/c1_example_numeric_rating" />
+
+                    <TextView
+                        android:id="@+id/c1_grape_details_num_comments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/c1_example_nb_comments" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/c1_grape_details_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{String.valueOf(grapeViewModel.grape.pricePerKilo) + @string/c1_example_price}"
+                    android:textColor="#40BFFF"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/c1_grape_details_is_available"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{grapeViewModel.grape.available? @string/b1_b2_available:@string/b1_b2_out_of_stock}"
+                    android:textColor="@{grapeViewModel.grape.available? @color/colorAccent : @color/red }"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/c1_description_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/c1_label_category"
+                        android:textColor="#223263"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/c1_cg_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:chipSpacingHorizontal="10dp"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/c1_chip_category_moldova"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/moldova" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/c1_chip_category_shine_muscat"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/shine_muscat" />
+                    </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/c1_description_sweetness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/c1_label_sweetness"
+                        android:textColor="#223263"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/c1_cg_sweetness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:chipSpacingHorizontal="10dp"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/c1_chip_sweetness_1"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/sweet" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/c1_chip_sweetness_2"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/super_sweet" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/c1_chip_sweetness_3"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checkable="true"
+                            android:text="@string/extra_sweet" />
+                    </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/c1_label_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/c1_label_description"
+                        android:textColor="#223263"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/c1_description_grape"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@{grapeViewModel.grape.description}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/c1_label_review_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/c1_review_product"
+                        android:textColor="#223263"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/c1_see_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/c1_see_more"
+                        android:textColor="@color/green_blue"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/c1_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/c2_item_rating" />
+
+                <TextView
+                    android:id="@+id/c1_tv_empty_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/c2_no_views"
+                    android:visibility="gone" />
+
+                <!-- 这个按钮是根据 有没有货来改变的-->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/c1_btn_add_to_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="@{grapeViewModel.grape.available}"
+                    android:onClick="@{() -> grapeViewModel.addItemToCart(grapeViewModel.grape)}"
+                    android:padding="12dp"
+                    android:text="@string/btn_add_to_cart"
+                    android:textAllCaps="false"
+                    app:cornerRadius="100dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

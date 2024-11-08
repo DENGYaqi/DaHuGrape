@@ -1,0 +1,4 @@
+id|name|price|rating|numRatings|category|city|sweetness|img_grape
+1|Cabernet Sauvignon|188|1|20|Red|Bologne|7|https://ibb.co/YT7L07shttps://ibb.co/PFtfy5c
+2|Sauvignon Blanc|99|2|3|Black|Bordeaux|6|https://ibb.co/VmJM1tz
+3|WOW|99|2|1|Black|Bordeaux|6|https://ibb.co/VmJM1tz

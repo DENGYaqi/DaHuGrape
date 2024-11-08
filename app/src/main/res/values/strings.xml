@@ -1,0 +1,228 @@
+<resources>
+
+    <string name="app_name">DaHuGrape</string>
+
+
+    <!-- Description content -->
+    <string name="a1_description_logo" translatable="false">logo</string>
+    <string name="b1_catfish_img" translatable="false">category image</string>
+
+    <!-- 入场动画和各个Fragment的介绍 到时候看看可删可不删 -->
+    <string name="title_home">Home</string>
+    <string name="title_explore">Explore</string>
+    <string name="title_cart">Cart</string>
+    <string name="title_offer">Offer</string>
+    <string name="title_account">Account</string>
+    <string name="title_splash">Grape manor</string>
+    <string name="login_page_name">Grape manor</string>
+    <string name="title_activity_l01__choose_login">L01_ChooseLogin</string>
+
+    <!-- 登录相关的string -->
+    <string name="login_success">Login Success</string>
+    <string name="mail_not_verified">Your Email is not verified</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="new_user_sign_up_here">Don’t have a account? Register</string>
+    <string name="connexion_avec_email_et_password">Login with Email</string>
+    <string name="connexion_avec_wechat_et_password">Login with WeChat</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="change_password">Change Password</string>
+    <string name="enter_new_password">Enter New Password</string>
+    <string name="update_password">Update Password</string>
+    <string name="logout">Logout</string>
+    <string name="welcome_word">Welcome to Da Hu grape</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="avatar">Avatar</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="register">Register</string>
+    <string name="already_user_login_here">Have a account? Sign In</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="add_avatar">Add avatar</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="logo">logo</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="send_reset_password_link">Send password reset link</string>
+    <string name="authentication_failed">Authentication failed:</string>
+    <string name="select_avatar">Select Profile</string>
+
+    <!-- 添加头像时候的AlertDialog 弹出对话框的内容 -->
+    <string name="add_photo">Add photo</string>
+    <string name="take_photo">Take photo</string>
+    <string name="from_gallery">Choose from gallery</string>
+    <string name="cancel">Cancel</string>
+    <string name="permission_denied">Permission Denied…</string>
+    <string name="sign_up_failed">Sign up failed:</string>
+    <string name="sent_email">Email verification sent on</string>
+    <string name="sign_up_okl_but_email_not_sent">Sign up Success But Failed to send verification email.</string>
+
+    <!-- 视障人士帮助 -->
+    <string name="tools_email" translatable="false">email@test.com</string>
+
+    <!-- 关于单个框框的葡萄内的起源地和尝试的分割符号 -->
+    <string name="divider_bullet" translatable="false">•</string>
+
+    <!-- 葡萄详细页面 -->
+    <string name="btn_add_to_cart">Add To Chart</string>
+    <string name="choice_kilo_5">5 kilos</string>
+    <string name="choice_kilo_10">10 kilos</string>
+    <string name="moldova">Moldova</string>
+    <string name="shine_muscat">Shine Muscat</string>
+    <string name="sweet">Sweet</string>
+    <string name="super_sweet">Super Sweet</string>
+    <string name="extra_sweet">Extra Sweet</string>
+
+    <!-- 葡萄item页面 -->
+    <string name="per_5kilo">/5 kilos</string>
+    <string name="per_10kilo">/10 kilos</string>
+    <string name="name_product_moldova">Moldova 1</string>
+    <string name="name_product_shine_muscat">Shine Muscat 2</string>
+
+    <!-- 收件人管理相关 -->
+    <string name="consignee_list_manage">Consignee List Manage</string>
+    <string name="add_new_consignee">Add new consignee</string>
+    <string name="button_create">Create</string>
+    <string name="empty_not_saved">Consignee not saved because its are empty.</string>
+
+    <!-- item_consignee -->
+    <string name="name_consignee">Consignee</string>
+    <string name="phone_number_consignee">Telephone</string>
+    <string name="province_consignee">Province</string>
+    <string name="city_consignee">City</string>
+    <string name="district_consignee">District</string>
+    <string name="postcode_consignee">Postcode</string>
+    <string name="Adresse_detail_consignee">Adresse Detail</string>
+    <string name="hint_name">Katy Perry</string>
+    <string name="hint_phone_number">Enter phone number</string>
+    <string name="hint_province">Enter province</string>
+    <string name="hint_city">Enter city</string>
+    <string name="hint_district">Enter district</string>
+    <string name="hint_postcode">Enter postcode</string>
+    <string name="hint_address_detail">Enter Address detail</string>
+    <string name="info_hint">Long press to delete</string>
+
+    <!-- 货币 -->
+    <string name="currency">$</string>
+
+    <!-- 忘记密码 -->
+    <string name="require_mail">Please enter your email address</string>
+    <string name="hint_mail">Email</string>
+    <string name="send_passeword_reset_email">Send reset mail</string>
+    <string name="reset_password_mail_is_send">Mail is send</string>
+    <string name="mail_not_exist">Mail not exist</string>
+    <string name="update_consignee">Update</string>
+
+    <!-- 关于搜索栏的内容 -->
+    <string name="search_hint">Search</string>
+    <string name="search_title">Search</string>
+    <string name="share_hint">Share</string>
+    <string name="share_title">Share</string>
+    <string name="setting_hint">Setting</string>
+    <string name="setting_title">Setting</string>
+    <string name="delete_consignee">Delete</string>
+    <string name="button_save">Save</string>
+
+    <!-- Grape -->
+    <string name="red_grape">Red grape</string>
+    <string name="green_grape">Green grape</string>
+    <string name="violet_grape">Violet grape</string>
+    <string name="black_grape">Black grape</string>
+    <string name="red_wine">Red wine</string>
+    <string name="white_wine">White wine</string>
+    <string name="champagne">Champagne</string>
+
+    <!-- Description Grape -->
+    <string name="description_red_grape">The Red Globe is a variety of very large, seeded red grapes with firm flesh used mainly as a table grape. It can be grown outdoors in very warm areas with long growing seasons such as California, Chile or Australia, but in most of the world it is strictly a greenhouse grape.</string>
+    <string name="description_green_grape">Green seedless grapes are small to medium in size and are round to slightly oval in shape, growing in tight or loose clusters depending on the variety. The skin ranges from yellow-green to bright green and is typically crisp, firm, and smooth. ... Green seedless grapes are mild and sweet with a slightly tart flavor.</string>
+    <string name="description_violet_grape">From rich and sweet, like the Concord grape, to the slightly spicy Black Beauty grape. Grapes with seeds tend to have a richer flavor than the seedless varieties. The flavor of purple grapes is affected by the number of tannins, and various other nutrients contained in the skin of the grape.</string>
+    <string name="description_black_grape">Black seedless grapes are small to medium in size and are round to slightly oval in shape. Their skin is deep purple to nearly black, and some varieties may have a waxy bloom or film on the surface to prevent moisture loss. ... The flesh is translucent, tender, and less crunchy than most red or green table grapes.</string>
+    <string name="description_red_wine">"Red wine is a type of wine made from dark-colored grape varieties. The actual color of the wine can range from intense violet, typical of young wines, through to brick red for mature wines and brown for older red wines. The juice from most purple grapes is greenish-white, the red color coming from anthocyan pigments (also called anthocyanins) present in the skin of the grape; exceptions are the relatively uncommon teinturier varieties, which produce a red-colored juice. Much of the red-wine production process therefore involves extraction of color and flavor components from the grape skin. It is a delicacy around the world. "</string>
+    <string name="description_white_wine">"White wine is a wine that is fermented without skin contact. The colour can be straw-yellow, yellow-green, or yellow-gold. It is produced by the alcoholic fermentation of the non-coloured pulp of grapes, which may have a skin of any colour. White wine has existed for at least 4000 years. "</string>
+    <string name="description_champagne">Champagne is a French sparkling wine. The term Champagne comes from its region where it is produced in “Champagne”. It is illegal to label any product Champagne unless it came from the Champagne wine region of France and is produced under the rules of the appellation.[1] This alcoholic drink is produced from specific types of grapes grown in the Champagne region following rules that demand, among other things, specific vineyard practices, sourcing of grapes exclusively from designated places within the Champagne region, specific grape-pressing methods and secondary fermentation of the wine in the bottle to cause carbonation.</string>
+
+    <!-- Description Grape 25个字以内 -->
+    <string name="brief_description_red_grape">Beneficial for the prevention of cardiovascular disease and stroke</string>
+    <string name="brief_description_green_grape">Green grapes are like \"big trees\", they are good for people with respiratory problems and poor skin tone</string>
+    <string name="brief_description_violet_grape">Purple grapes are a powerful \"antioxidant\", not only to prevent aging, but also to reduce the deterioration of vision in the elderly</string>
+    <string name="brief_description_black_grape">Black grape is like a \"chicken blood\", can fight fatigue, suitable for people with nervous exhaustion and fatigue</string>
+    <string name="brief_description_red_wine">Red wine has a considerable amount of polysaccharides, which are excellent for preventing cardiovascular disease</string>
+    <string name="brief_description_whit_wine">White wine has antiseptic, blood pressure and cholesterol-lowering effects, and is effective in preventing myocardial infarction</string>
+    <string name="brief_description_champagne">Champagne has a sweet and sour taste and is often used as an aperitif to stimulate the taste buds and increase appetite</string>
+
+    <!-- Order Magene -->
+    <string name="order_manage">Order Manage</string>
+
+    <!-- Account -->
+    <string name="image_user">Image client</string>
+    <string name="my_chatbot">My ChatBot</string>
+
+    <!-- ChatBot -->
+    <string name="tfe_sr_app_name">TFL Smart Reply</string>
+    <string name="tfe_sr_button_send">Send</string>
+    <string name="tfe_sr_edit_text_hint">Enter your message...</string>
+    <string name="classification_image">Classification Image</string>
+
+    <!-- Material Input -->
+    <string name="helperTextLoginOrRegister">Mandatory*</string>
+
+    <!-- 输入框相关 -->
+    <string name="nameErrorHint">Allow only character</string>
+
+
+    <!-- 未分类 -->
+    <string name="b1_category">Category</string>
+    <string name="b1_more_category">More Category</string>
+    <string name="b1_flash_sale">Flash Sale</string>
+    <string name="b1_more_offer">More Offer</string>
+    <string name="c1_name">Name</string>
+    <string name="c1_example_price">Price / kilo</string>
+    <string name="c1_example_numeric_rating" translatable="false">4.5</string>
+    <string name="c1_example_nb_comments" translatable="false">(10)</string>
+    <string name="c1_description_of_grape">Description of Grape</string>
+    <string name="c1_label_kilo">Kilo</string>
+    <string name="c1_label_category">Category</string>
+    <string name="c1_label_sweetness">Sweetness</string>
+    <string name="c1_label_description">Description Grape</string>
+    <string name="c2_label_all_review">All Review</string>
+    <string name="c2_label_1star" translatable="false">1 ⭐️</string>
+    <string name="c2_label_2star" translatable="false">2 ⭐️</string>
+    <string name="c2_label_3star" translatable="false">3 ⭐</string>
+    <string name="c2_label_4star" translatable="false">4 ⭐</string>
+    <string name="c2_label_5star" translatable="false">5 ⭐</string>
+    <string name="c2_no_views">No Views</string>
+    <string name="c2_bnt_write_review">Write Review</string>
+
+    <string name="c3_review_send_succeed">Review send succeed</string>
+    <string name="d1_enter_coupon_code">Enter Coupon Code</string>
+    <string name="d1_apply">Apply</string>
+    <string name="d1_items">items</string>
+    <string name="d1_shipping">Shipping</string>
+    <string name="d1_total_price">Total Price</string>
+    <string name="d1_amount">amount</string>
+    <string name="d1_choice_consignee">Choice Consignee</string>
+    <string name="d1_you_cart_is_empty">You cart is empty.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="b1_b2_add_to_cart">Add to cart</string>
+    <string name="b1_b2_available">Available</string>
+    <string name="b1_b2_out_of_stock">Out of stock</string>
+    <string name="c1_review_product">Review Product</string>
+    <string name="c1_see_more">See more</string>
+    <string name="b2_added_to_cart">added to cart</string>
+    <string name="b2_checkout">Checkout</string>
+    <string name="b2_max_quantity_in_cart">Already have the max quantity</string>
+    <string name="cart_adapter_least_Product">Least product is 1</string>
+    <string name="cart_adapter_max_Product">Max product is 10</string>
+    <string name="d1_pay">Pay</string>
+    <string name="e3_thanks_for_your_order">Thanks for your order.</string>
+    <string name="e3_continue_shopping">Continue Shopping</string>
+    <string name="kg" translatable="false">kg</string>
+    <string name="_1" translatable="false">1</string>
+
+</resources>

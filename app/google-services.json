@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "34003711386",
+    "project_id": "dahugrape",
+    "storage_bucket": "dahugrape.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34003711386:android:b4fbcb0302c9f2bf3c3623",
+        "android_client_info": {
+          "package_name": "com.example.dahugrape"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34003711386-m2612pdlhald728893rbigmkfp2fvt6g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAzTRNylewTFr88oqoszXW86xWoGigRGs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34003711386-m2612pdlhald728893rbigmkfp2fvt6g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name=".MyApplication"
+    package="com.example.dahugrape">
+    <!-- 请求的权限们 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 请求互联网访问权限 数据库 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 请求相机读取权限 但是还是用不了相机 读取不了图册 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo2"
+        android:label="@string/login_page_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".intro.IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ml1_cv.classification_image.CameraActivity" />
+        <activity android:name=".ml1_cv.classification_image.ClassificationImageActivity" />
+        <activity android:name=".ml2_nlu.chatbot.ChatBotActivity" />
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".a_login.A6_ForgotPassword" />
+        <activity android:name=".a_login.A5_SignInWithMailAndPassword" />
+        <activity android:name=".a_login.A3_RegisterWithMail" />
+        <activity android:name=".a_login.A2_ChooseLogin" />
+        <activity
+            android:name=".a_login.A1_SplashScreenActivity"
+            android:theme="@style/AppTheme.SplashScreen">
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+    </application>
+
+</manifest>
