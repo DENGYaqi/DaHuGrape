@@ -10,6 +10,8 @@
 
 ### 中文
 
+#### 简介
+
 2020年安卓原生练手项目，估计不会继续了，就当存个档吧。
 
 完成部分 : 主页、下单、快速下单、购物车、账户管理
@@ -24,6 +26,8 @@
 - .gitattributes
 
 ### English
+
+#### Introduction
 
 Practice project of Android at 2020，there is a high probability will not continue.
 
