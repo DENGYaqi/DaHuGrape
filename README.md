@@ -1,5 +1,4 @@
 # DaHuGrape
- 安卓原生应用APP : 大户葡萄庄园
 
 ## Language
 
