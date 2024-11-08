@@ -28,14 +28,14 @@ un finish part : comment area, search engine, customer service, CV, share
 
 测试机(display device) : 华为 Mate 20 pro(HUAWEI Mate 20 Pro), huawei lya-l29。
 
-![主页](./read_me_img/1_home_page.gif)
+![主页](./read_me_img/1_home_page.gif){: width="300" height="300" }
 _主页(home page)_
 
-![购物与下单](./read_me_img/2_shop_order.gif)
+![购物与下单](./read_me_img/2_shop_order.gif){: width="300" height="300" }
 _购物与下单(shop and order)_
 
-![折扣页与快速下单](./read_me_img/3_discount_fast_shop.gif)
+![折扣页与快速下单](./read_me_img/3_discount_fast_shop.gif){: width="300" height="300" }
 _折扣与快速下单(discount and fast shop)_
 
-![账户](./read_me_img/4_account.gif)
+![账户](./read_me_img/4_account.gif){: width="300" height="300" }
 _账户(account)_
