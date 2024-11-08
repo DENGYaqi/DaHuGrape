@@ -28,7 +28,6 @@ un finish part : comment area, search engine, customer service, CV, share
 
 测试机(display device) : 华为 Mate 20 pro(HUAWEI Mate 20 Pro), huawei lya-l29。
 
-主页(home page)
 ![主页](./read_me_img/1_home_page.gif)
 _主页(home page)_
 
