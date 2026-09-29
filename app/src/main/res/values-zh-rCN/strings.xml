@@ -136,7 +136,7 @@
     <string name="c3_review_send_succeed">评论成功</string>
     <string name="d1_enter_coupon_code">输入折扣码</string>
     <string name="d1_apply">应用</string>
-    <string name="d1_items">数量</string>
+    <string name="d1_items">单价</string>
     <string name="d1_amount">价格</string>
     <string name="d1_shipping">运费</string>
     <string name="d1_total_price">总价</string>

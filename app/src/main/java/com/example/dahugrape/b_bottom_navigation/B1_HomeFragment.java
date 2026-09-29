@@ -24,7 +24,6 @@ import com.example.dahugrape.database.adapter.CategoryAdapter;
 import com.example.dahugrape.database.adapter.GrapeAdapter;
 import com.example.dahugrape.database.model.Category;
 import com.example.dahugrape.database.model.Grape;
-import com.example.dahugrape.database.model.Rating;
 import com.example.dahugrape.database.viewmodels.GrapeViewModel;
 import com.example.dahugrape.databinding.B1FragmentHomeBinding;
 import com.google.android.material.snackbar.Snackbar;

@@ -47,6 +47,4 @@ public class A1_SplashScreenActivity extends AppCompatActivity {
             }
         }, SPLASH_TIME_OUT);
     }
-
-
 }
